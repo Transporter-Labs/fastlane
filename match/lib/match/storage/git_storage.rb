@@ -53,6 +53,10 @@ module Match
         self.platform = platform if platform
       end
 
+      def prefixed_working_directory
+        return working_directory
+      end
+
       def download
         # Check if we already have a functional working_directory
         return if @working_directory
@@ -205,8 +209,6 @@ module Match
                                             print_command: FastlaneCore::Globals.verbose?)
           end
         end
-
-        self.clear_changes
       rescue => ex
         UI.error("Couldn't commit or push changes back to git...")
         UI.error(ex)

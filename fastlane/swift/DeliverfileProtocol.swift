@@ -21,6 +21,7 @@ protocol DeliverfileProtocol: class {
   var automaticRelease: Bool { get }
   var autoReleaseDate: String? { get }
   var phasedRelease: Bool { get }
+  var resetRatings: Bool { get }
   var priceTier: String? { get }
   var appRatingConfigPath: String? { get }
   var submissionInformation: String? { get }
@@ -43,6 +44,7 @@ protocol DeliverfileProtocol: class {
   var secondarySecondSubCategory: String? { get }
   var tradeRepresentativeContactInformation: [String : Any]? { get }
   var appReviewInformation: [String : Any]? { get }
+  var appReviewAttachmentFile: String? { get }
   var description: String? { get }
   var name: String? { get }
   var subtitle: [String : Any]? { get }
@@ -50,6 +52,7 @@ protocol DeliverfileProtocol: class {
   var promotionalText: [String : Any]? { get }
   var releaseNotes: String? { get }
   var privacyUrl: String? { get }
+  var appleTvPrivacyPolicy: String? { get }
   var supportUrl: String? { get }
   var marketingUrl: String? { get }
   var languages: [String]? { get }
@@ -81,6 +84,7 @@ extension DeliverfileProtocol {
   var automaticRelease: Bool { return false }
   var autoReleaseDate: String? { return nil }
   var phasedRelease: Bool { return false }
+  var resetRatings: Bool { return false }
   var priceTier: String? { return nil }
   var appRatingConfigPath: String? { return nil }
   var submissionInformation: String? { return nil }
@@ -103,6 +107,7 @@ extension DeliverfileProtocol {
   var secondarySecondSubCategory: String? { return nil }
   var tradeRepresentativeContactInformation: [String : Any]? { return nil }
   var appReviewInformation: [String : Any]? { return nil }
+  var appReviewAttachmentFile: String? { return nil }
   var description: String? { return nil }
   var name: String? { return nil }
   var subtitle: [String : Any]? { return nil }
@@ -110,6 +115,7 @@ extension DeliverfileProtocol {
   var promotionalText: [String : Any]? { return nil }
   var releaseNotes: String? { return nil }
   var privacyUrl: String? { return nil }
+  var appleTvPrivacyPolicy: String? { return nil }
   var supportUrl: String? { return nil }
   var marketingUrl: String? { return nil }
   var languages: [String]? { return nil }
@@ -120,4 +126,4 @@ extension DeliverfileProtocol {
 
 // Please don't remove the lines below
 // They are used to detect outdated files
-// FastlaneRunnerAPIVersion [0.9.5]
+// FastlaneRunnerAPIVersion [0.9.8]
